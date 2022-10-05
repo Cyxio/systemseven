@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import syselogo from './syselogo.jpg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <div className="App-header">
+          <img src={syselogo} className="App-logo" alt="logo" />
           <p>
-            Hello from Render!
+            System Seven invites you to:
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <h1>
+            JOIN THE MACHINE
+          </h1>
+          <p className='info'>
+            Join the Machine will be held at Jämeräntaival 4, 18:00 - 22:00 Thursday 20.10.
+          </p>
+          <p className='details'>
+            This event will confirm your interest in our organization, and set you on the path of productivity towards a 
+            more meaningful future.
+          </p>
+          <div className='signup'>
+            <p>Signup will open 7.10</p>
+          </div>
+        </div>
       </div>
     );
   }

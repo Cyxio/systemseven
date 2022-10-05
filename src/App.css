@@ -1,32 +1,67 @@
 .App {
   text-align: center;
+  font-family: 'Questrial', sans-serif;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  animation: App-logo-breathe infinite 7s ease-in-out;
+  height: 20vmin;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 60px;
+  color: rgb(237, 222, 219);
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+h1 {
+  font-size: 108px;
+  background: linear-gradient(to right, rgb(0, 0, 0) 2%, rgb(168, 0, 0) 40%, rgb(168, 0, 0) 60%, rgb(0, 0, 0) 98%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 7s linear infinite;
+}
+
+.details {
+  max-width: 1000px;
+  font-size: 28px;
+}
+
+.signup {
+  border: 2px solid rgb(168, 0, 0);
+  border-radius: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@keyframes shine {
   to {
-    transform: rotate(360deg);
+    background-position: -200% center;
+  }
+}
+
+@keyframes App-logo-breathe {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
