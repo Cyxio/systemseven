@@ -22,7 +22,9 @@ class App extends Component {
             more meaningful future.
           </p>
           <div className='signup'>
-            <p>Signup will open 7.10</p>
+            <p>Participants are required to apply as a group of 5</p>
+            <p>Applications for the event are accepted during 13th and 14th of October</p>
+            <p>Results will be posted by the 16th</p>
           </div>
         </div>
       </div>
