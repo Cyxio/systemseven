@@ -1,44 +1,135 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import syselogo from './syselogo.jpg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    const signupStart = new Date('October 13, 2022 00:00:00');
-    const signupEnd = new Date('October 14, 2022 23:59:00');
-    const datenow = new Date();
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={syselogo} className="App-logo" alt="logo" />
-          <p>
-            System Seven invites you to:
-          </p>
-          <h1>
-            JOIN THE MACHINE
-          </h1>
-          <p className='info'>
-            Join the Machine will be held at Jämeräntaival 4, 18:00 - 22:00 Thursday 20.10.
-          </p>
-          <p className='details'>
-            This event will confirm your interest in our organization, and set you on the path of productivity towards a 
-            more meaningful future.
-          </p>
-          {(datenow < signupEnd && datenow > signupStart) ? 
-          <div className='g-form-container'>
-            <iframe className="responsive-iframe" title="SignupForms" src="https://docs.google.com/forms/d/e/1FAIpQLSdLTMSK-Ei71-4pvHkFiG-rJLAIXkDGQzp2wD1evRWDj03T6Q/viewform?embedded=true" width="100%" height="fit-content" frameBorder="0" marginHeight="0" marginWidth="0">Loading...</iframe>
-          </div>
-          :
-          <div className='signup'>
-            <p>Participants are required to apply as a group of 5</p>
-            <p>Applications for the event are accepted during 13th and 14th of October</p>
-            <p>Results will be posted by the 16th</p>
-          </div>
-          }
+const App = () => {
+  const [showList, setShowList] = useState(false);
+  return (
+    <div className="App">
+      <div className="App-header">
+        <img src={syselogo} className="App-logo" alt="logo" />
+        <p>
+          System Seven invites you to:
+        </p>
+        <h1>
+          JOIN THE MACHINE
+        </h1>
+        <p className='info'>
+          Join the Machine will be held at Jämeräntaival 4, 18:00 - 22:00 Thursday 20.10.
+        </p>
+        <p className='details'>
+          This event will confirm your interest in our organization, and set you on the path of productivity towards a 
+          more meaningful future.
+        </p>
+        <div className='signup'>
+          <p>The signup for the event has ended.</p>
         </div>
+        <button class="button-80" onClick={() => setShowList(!showList)}>Signup list</button>
+        {showList && 
+        <div className='listContainer'>
+          <ul className='signup-list'>
+            <li><b>Valtteri</b></li>
+            <li>Joonatan</li>
+            <li>Hemmo</li>
+            <li>Aaro</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Denis</b></li>
+            <li>Teemu</li>
+            <li>Pauli</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Topias</b></li>
+            <li>Sampo</li>
+            <li>Granit</li>
+            <li>Abdirauf</li>
+            <li>Miikkael</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Patricia</b></li>
+            <li>Lilja</li>
+            <li>Inka</li>
+            <li>Ida</li>
+            <li>Basant</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Ilmari</b></li>
+            <li>Aaron</li>
+            <li>Lassi</li>
+            <li>Anton</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Lauri</b></li>
+            <li>Nuutti</li>
+            <li>Aaro</li>
+            <li>Henrik</li>
+            <li>Joel</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Markus</b></li>
+            <li>Kasper</li>
+            <li>Eetu</li>
+            <li>Onni</li>
+            <li>Siiri</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Arto</b></li>
+            <li>Jatuli</li>
+            <li>Ernesti</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Leevi</b></li>
+            <li>William</li>
+            <li>Marek</li>
+            <li>Pietro</li>
+            <li>Marcos</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Noora</b></li>
+            <li>Helmi</li>
+            <li>Maj</li>
+            <li>Julia</li>
+            <li>Alina</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Shavit</b></li>
+            <li>Timi</li>
+            <li>Camilla</li>
+            <li>Pekko</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Anna</b></li>
+            <li>Sneha</li>
+            <li>Eero</li>
+            <li>Tilda</li>
+            <li>Joona</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Otto</b></li>
+            <li>Antti</li>
+            <li>Milla</li>
+            <li>Luka</li>
+            <li>Iiro</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Olli</b></li>
+            <li>Severi</li>
+            <li>Aaro</li>
+            <li>Atte</li>
+            <li>Niko</li>
+          </ul>
+          <ul className='signup-list'>
+            <li><b>Leevi</b></li>
+            <li>Mitja</li>
+            <li>Imran</li>
+            <li>Aleksi</li>
+            <li>Arttu</li>
+          </ul>
+        </div>
+        }
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;
