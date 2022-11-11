@@ -10,6 +10,7 @@ body {
 .App-logo {
   animation: App-logo-breathe infinite 7s ease-in-out;
   height: 20vmin;
+  margin-bottom: 16px;
 }
 
 .App-header {
