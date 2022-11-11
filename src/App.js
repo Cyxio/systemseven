@@ -7,7 +7,7 @@ const App = () => {
     <div className="App">
       <div className="App-header">
         <img src={syselogo} className="App-logo" alt="logo" />
-        <video width="1280" height="720" controls>
+        <video width="1280" height="720" controls style={{width: "-webkit-fill-available"}}>
           <source src="thesystemseven.mp4" type="video/mp4"/>
         </video>
       </div>
